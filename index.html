@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Yust wait</title>
+<meta name="description" content="Yust wait">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath fill='%23fff' d='M8 7h4l4 7 4-7h4l-6.3 10.2V25h-3.4v-7.8z'/%3E%3C/svg%3E">
+<style>
+/* Layout: one black screen. WebGL fills it edge to edge and the phrase hangs under the cartridge. */
+:root{
+  --void:#000;
+  --silver:#dcdddf;
+  --steel:#8f9196;
+  --face:'Jost','Futura','Avenir Next','Century Gothic',sans-serif;
+  --track:.26em;
+  color-scheme:dark;
+}
+@font-face{
+  font-family:'Jost';font-style:normal;font-weight:300;font-display:block;
+  src:url(data:font/woff2;base64,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) format('woff2');
+}
+html,body{height:100%;margin:0;background:var(--void)}
+body{
+  overflow:hidden;color:var(--silver);font-family:var(--face);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+#stage{
+  position:fixed;inset:0;width:100%;height:100%;display:block;
+  cursor:grab;touch-action:pan-y;outline:0;-webkit-tap-highlight-color:transparent;
+}
+#stage.held{cursor:grabbing}
+#caption{
+  position:fixed;left:0;right:0;top:var(--line-top,50%);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;justify-items:center;gap:clamp(.75rem,1.8vh,1.15rem);
+  text-align:center;pointer-events:none;
+  animation:arrive 2.6s 2s cubic-bezier(.2,.7,.2,1) both;
+}
+#line{
+  margin:0;
+  font:300 clamp(1.0625rem,.72rem + .95vw,1.625rem)/1.2 var(--face);
+  letter-spacing:var(--track);text-indent:var(--track);
+}
+/* Seconds left, in groups of three. Every digit gets the same width, so the line never shifts as it counts. */
+#count{margin:0;color:var(--steel);font:300 clamp(1.0625rem,.72rem + .95vw,1.625rem)/1 var(--face)}
+#digits{display:inline-flex;gap:.36em}
+#digits .g{display:inline-flex}
+#digits .d{display:inline-block;width:.6em;text-align:center}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@keyframes arrive{from{opacity:.04;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
+@media (prefers-reduced-motion:reduce){#caption{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="stage" role="img" aria-label="A Game Boy cartridge machined from polished metal, with a black label and a white capital Y, floating and turning in a black void."></canvas>
+<div id="caption">
+  <h1 id="line">Yust wait</h1>
+  <p id="count" role="timer"><span id="digits"></span><span class="sr"> seconds until 1 January 2027</span></p>
+</div>
+<script>
+// Countdown to midnight on 1 January 2027, Santiago de Chile time (UTC−3 in summer).
+// One fixed moment, so every visitor counts down to the same second.
+(function(){
+'use strict';
+const TARGET=Date.parse('2027-01-01T00:00:00-03:00');
+const out=document.getElementById('digits');
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let shown='',timer=0;
+
+function draw(n){
+  const s=String(n);
+  if(s===shown)return;
+  if(s.length!==shown.length){
+    out.textContent='';
+    for(let end=s.length%3||3,start=0;start<s.length;start=end,end+=3){
+      const g=document.createElement('span');g.className='g';
+      for(const ch of s.slice(start,end)){
+        const d=document.createElement('span');d.className='d';d.textContent=ch;g.appendChild(d);
+      }
+      out.appendChild(g);
+    }
+  }else{
+    const cells=out.querySelectorAll('.d');
+    for(let i=0;i<s.length;i++){
+      if(s[i]===shown[i])continue;
+      cells[i].textContent=s[i];
+      if(!calm&&cells[i].animate)cells[i].animate(
+        [{opacity:.2,transform:'translateY(-.24em)'},{opacity:1,transform:'none'}],
+        {duration:520,easing:'cubic-bezier(.2,.7,.2,1)'}
+      );
+    }
+  }
+  shown=s;
+}
+function tick(){
+  clearTimeout(timer);
+  const ms=TARGET-Date.now();
+  draw(Math.max(0,Math.ceil(ms/1000)));
+  if(ms>0)timer=setTimeout(tick,(ms%1000||1000)+8);   // wake just after the next whole second
+}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});
+tick();
+})();
+</script>
+<script>
+(function(){
+'use strict';
+
+const canvas=document.getElementById('stage');
+const caption=document.getElementById('caption');
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const {PI,abs,sin,cos,tan,sqrt,hypot,atan2,min,max,exp,ceil,sign}=Math;
+const clamp=(x,a,b)=>min(b,max(a,x));
+const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t)};
+const glf=x=>(+x).toFixed(5);
+const glv=a=>`vec${a.length}(${a.map(glf).join(',')})`;
+
+/* ---------------------------------------------------------------------------
+   Cartridge dimensions in millimetres, taken from an original DMG Game Pak.
+   Origin at the centre of the body. +z faces the label, +y the top end.
+--------------------------------------------------------------------------- */
+const HW=29, HH=32.75;                 // 58 × 65.5 body
+const ZF=4, ZL=3.2;                    // deck, floor of grooves and side rails
+const ZS1=2.4, ZS0=-1;                 // edge-connector slot ceiling, PCB plane and shell seam
+const ZBAND=3.7, YBAND=-21;            // back: stepped band over the connector
+const NX=23.4, NY=30;                  // power-switch lock notch, top right
+const YS=6.5, RAIL=1;                  // shoulder where the side rails begin
+const GROOVES=[27.2,25.3,23.4,21.5,19.6], GH=.5, TOOTH=.85; // five grip grooves a side
+const PILL_Y=23.25, PILL_HW=22.2, PILL_HH=5.55;
+const LABEL_Y=-4.55, REC_HW=22.4, REC_HH=19.2;
+const SLOT_HW=26, SLOT_D=9;            // connector opening
+const PINS=32, PIN_PITCH=1.5;          // the DMG bus: 32 contacts at 1.5 mm
+const SCREW_Y=-14.7, DIMPLE_Y=1.2;
+const LAB_INSET=1.32;
+
+/* ---------------------------------------------------------------------------
+   Mesh building: rounded contours lofted along edge profiles.
+--------------------------------------------------------------------------- */
+const vData=[], iData=[]; let vCount=0;
+
+function vert(x,y,z,nx,ny,nz,mat,occ,flip){
+  vData.push(x,y,flip?-z:z,nx,ny,flip?-nz:nz,mat,occ);
+  return vCount++;
+}
+function tri(a,b,c){
+  const A=a*8,B=b*8,C=c*8,d=vData;
+  const ux=d[B]-d[A],uy=d[B+1]-d[A+1],uz=d[B+2]-d[A+2];
+  const vx=d[C]-d[A],vy=d[C+1]-d[A+1],vz=d[C+2]-d[A+2];
+  const gx=uy*vz-uz*vy,gy=uz*vx-ux*vz,gz=ux*vy-uy*vx;
+  if(gx*gx+gy*gy+gz*gz<1e-16)return;
+  const nx=d[A+3]+d[B+3]+d[C+3],ny=d[A+4]+d[B+4]+d[C+4],nz=d[A+5]+d[B+5]+d[C+5];
+  if(gx*nx+gy*ny+gz*nz>=0)iData.push(a,b,c);else iData.push(a,c,b);
+}
+
+// CCW list of [x,y,radius] → dense outline with exact outward normals.
+function contour(verts){
+  const N=verts.length,E=[];
+  for(let i=0;i<N;i++){
+    const a=verts[(i+N-1)%N],b=verts[i],c=verts[(i+1)%N];
+    let ux=b[0]-a[0],uy=b[1]-a[1],vx=c[0]-b[0],vy=c[1]-b[1];
+    const lu=hypot(ux,uy),lv=hypot(vx,vy);ux/=lu;uy/=lu;vx/=lv;vy/=lv;
+    const turn=atan2(ux*vy-uy*vx,ux*vx+uy*vy);
+    E.push({ux,uy,lv,turn,t:(b[2]||0)*tan(abs(turn)/2)});
+  }
+  for(let pass=0;pass<2;pass++)for(let i=0;i<N;i++){
+    const j=(i+1)%N,s=E[i].lv/(E[i].t+E[j].t+1e-9);
+    if(s<1){E[i].t*=s;E[j].t*=s}
+  }
+  const p=[],n=[];
+  const add=(x,y,nx,ny)=>{
+    const k=p.length;
+    if(k&&hypot(p[k-1][0]-x,p[k-1][1]-y)<1e-6)return;
+    p.push([x,y]);n.push([nx,ny]);
+  };
+  for(let i=0;i<N;i++){
+    const e=E[i],b=verts[i],A=abs(e.turn),nx0=e.uy,ny0=-e.ux;
+    if(b[3]!==undefined){add(b[0],b[1],b[3],b[4]);continue}
+    if(A<1e-5||e.t<1e-6){add(b[0],b[1],nx0,ny0);continue}
+    const r=e.t/tan(A/2),s=sign(e.turn);
+    const ax=b[0]-e.ux*e.t,ay=b[1]-e.uy*e.t;
+    const cx=ax-s*nx0*r,cy=ay-s*ny0*r;
+    const segs=max(2,ceil(A*sqrt(r)*6));
+    for(let j=0;j<=segs;j++){
+      const f=e.turn*j/segs,co=cos(f),si=sin(f);
+      const nx=nx0*co-ny0*si,ny=nx0*si+ny0*co;
+      add(cx+s*r*nx,cy+s*r*ny,nx,ny);
+    }
+  }
+  if(hypot(p[0][0]-p[p.length-1][0],p[0][1]-p[p.length-1][1])<1e-6){p.pop();n.pop()}
+  return {p,n};
+}
+const rrect=(cx,cy,hx,hy,r)=>contour([[cx-hx,cy-hy,r],[cx+hx,cy-hy,r],[cx+hx,cy+hy,r],[cx-hx,cy+hy,r]]);
+const circle=(cx,cy,r)=>rrect(cx,cy,r,r,r);
+function polar(cx,cy,fn,segs){
+  const p=[],n=[];
+  for(let i=0;i<segs;i++){
+    const a=i/segs*2*PI,r=fn(a),dr=(fn(a+1e-4)-fn(a-1e-4))/2e-4;
+    const tx=dr*cos(a)-r*sin(a),ty=dr*sin(a)+r*cos(a),l=hypot(tx,ty);
+    p.push([cx+r*cos(a),cy+r*sin(a)]);n.push([ty/l,-tx/l]);
+  }
+  return {p,n};
+}
+
+// Edge profile in (offset along the outline normal, z). The surface normal sits
+// on the right of the travel direction. A third value rounds that corner with a
+// quintic blend whose curvature is zero at both ends, so reflections run from a
+// flat into the edge without a kink. No third value leaves a hard crease.
+function path(pts,seg=8){
+  const rows=[];
+  const row=(o,z,dx,dz)=>{const l=hypot(dx,dz)||1;rows.push({o,z,nr:dz/l,nz:-dx/l})};
+  for(let i=0;i<pts.length;i++){
+    const P=pts[i],A=pts[i-1],B=pts[i+1];
+    if(!A){row(P[0],P[1],B[0]-P[0],B[1]-P[1]);continue}
+    if(!B){row(P[0],P[1],P[0]-A[0],P[1]-A[1]);continue}
+    let ax=P[0]-A[0],az=P[1]-A[1],bx=B[0]-P[0],bz=B[1]-P[1];
+    const la=hypot(ax,az),lb=hypot(bx,bz);ax/=la;az/=la;bx/=lb;bz/=lb;
+    const t=P[2]||0;
+    if(!t){row(P[0],P[1],ax,az);row(P[0],P[1],bx,bz);continue}
+    const c=[[-t,0],[-t*.6,0],[-t*.25,0],[0,t*.25],[0,t*.6],[0,t]]
+      .map(([ka,kb])=>[P[0]+ax*ka+bx*kb,P[1]+az*ka+bz*kb]);
+    for(let k=0;k<=seg;k++){
+      const u=k/seg,w=1-u;
+      const b5=[w**5,5*u*w**4,10*u*u*w**3,10*u**3*w*w,5*u**4*w,u**5];
+      const b4=[w**4,4*u*w**3,6*u*u*w*w,4*u**3*w,u**4];
+      let x=0,z=0,dx=0,dz=0;
+      for(let q=0;q<6;q++){x+=b5[q]*c[q][0];z+=b5[q]*c[q][1]}
+      for(let q=0;q<5;q++){dx+=b4[q]*(c[q+1][0]-c[q][0]);dz+=b4[q]*(c[q+1][1]-c[q][1])}
+      row(x,z,dx,dz);
+    }
+  }
+  return rows;
+}
+
+function loft(c,rows,{mat=0,occ=1,flip=false}={}){
+  const n=c.p.length,base=vCount;
+  for(const w of rows)for(let i=0;i<n;i++){
+    const x=c.p[i][0],y=c.p[i][1],nx=c.n[i][0],ny=c.n[i][1];
+    const o=typeof occ==='function'?occ(w,x,y):occ;
+    vert(x+nx*w.o,y+ny*w.o,w.z,nx*w.nr,ny*w.nr,w.nz,mat,o,flip);
+  }
+  for(let r=0;r<rows.length-1;r++){
+    if(abs(rows[r].o-rows[r+1].o)<1e-7&&abs(rows[r].z-rows[r+1].z)<1e-7)continue;
+    for(let i=0;i<n;i++){
+      const j=(i+1)%n,a=base+r*n+i,b=base+r*n+j,cc=base+(r+1)*n+j,d=base+(r+1)*n+i;
+      tri(a,b,cc);tri(a,cc,d);
+    }
+  }
+}
+
+// Ear clipping with bridged holes. Outlines stay under a couple of thousand
+// points, and every cap is flat, so triangle quality does not matter here.
+const area2=(a,b,c)=>(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);
+function inTri(a,b,c,p){
+  const d1=area2(a,b,p),d2=area2(b,c,p),d3=area2(c,a,p);
+  return !(((d1<0)||(d2<0)||(d3<0))&&((d1>0)||(d2>0)||(d3>0)));
+}
+function bridge(poly,hole){
+  let mi=0;
+  for(let i=1;i<hole.length;i++)if(hole[i].x>hole[mi].x)mi=i;
+  const M=hole[mi],n=poly.length;
+  let bx=Infinity,bi=-1;
+  for(let i=0;i<n;i++){
+    const a=poly[i],b=poly[(i+1)%n];
+    if(a.y<=M.y&&b.y>M.y){  // from inside a CCW outline, a ray to +x exits through an upward edge
+      const x=a.x+(M.y-a.y)*(b.x-a.x)/(b.y-a.y);
+      if(x>=M.x&&x<bx){bx=x;bi=a.x>b.x?i:(i+1)%n}
+    }
+  }
+  const I={x:bx,y:M.y},P=poly[bi];
+  let best=bi,bestK=Infinity;
+  for(let i=0;i<n;i++){
+    const p=poly[i];
+    if(i===bi||p===P||p.x<M.x||!inTri(M,I,P,p))continue;
+    if(area2(poly[(i+n-1)%n],p,poly[(i+1)%n])>=0)continue;
+    const k=abs(p.y-M.y)/(p.x-M.x+1e-9);
+    if(k<bestK){bestK=k;best=i}
+  }
+  const out=poly.slice(0,best+1);
+  for(let i=0;i<hole.length;i++)out.push(hole[(mi+i)%hole.length]);
+  out.push(M,poly[best]);
+  for(let i=best+1;i<n;i++)out.push(poly[i]);
+  return out;
+}
+function triangulate(outer,holes){
+  let poly=outer;
+  const hs=holes.map(h=>h.slice().reverse()).sort((a,b)=>max(...b.map(p=>p.x))-max(...a.map(p=>p.x)));
+  for(const h of hs)poly=bridge(poly,h);
+  const nodes=poly.map(p=>({p}));
+  nodes.forEach((v,i)=>{v.prev=nodes[(i+nodes.length-1)%nodes.length];v.next=nodes[(i+1)%nodes.length]});
+  let count=nodes.length,cur=nodes[0],stall=0;
+  const out=[];
+  while(count>2){
+    const a=cur.prev.p,b=cur.p,c=cur.next.p;
+    let ear=area2(a,b,c)>1e-10;
+    if(ear)for(let w=cur.next.next;w!==cur.prev;w=w.next){
+      const q=w.p;
+      if(q===a||q===b||q===c)continue;
+      if((q.x===a.x&&q.y===a.y)||(q.x===b.x&&q.y===b.y)||(q.x===c.x&&q.y===c.y))continue;
+      if(inTri(a,b,c,q)){ear=false;break}
+    }
+    if(ear||stall>count){
+      if(ear)out.push([a.i,b.i,c.i]);
+      cur.prev.next=cur.next;cur.next.prev=cur.prev;count--;stall=0;cur=cur.next;
+    }else{stall++;cur=cur.next}
+  }
+  return out;
+}
+function cap(outer,oo,holes,z,nz,{mat=0,occ=1,flip=false}={}){
+  const mk=(c,o)=>c.p.map((p,i)=>{
+    const x=p[0]+c.n[i][0]*o,y=p[1]+c.n[i][1]*o;
+    return {x,y,i:vert(x,y,z,0,0,nz,mat,occ,flip)};
+  });
+  const tris=triangulate(mk(outer,oo),holes.map(h=>mk(h[0],h[1])));
+  for(const t of tris)tri(t[0],t[1],t[2]);
+}
+
+/* ---------------------------------------------------------------------------
+   The cartridge. Stacked solids, each hiding the fillet of the one under it
+   wherever their walls run flush.
+--------------------------------------------------------------------------- */
+function buildCartridge(){
+  const PR=7.1,PX=16.65;                                  // grip pocket, concentric with the oval panel
+  const gx=y=>PX+sqrt(PR*PR-(y-PILL_Y)*(y-PILL_Y));
+  const yLo=GROOVES[4]-GH,yHi=GROOVES[0]+GH;
+  const TIP=.44,EDGE=.7,SMALL=.42;
+  const comb=(right)=>{
+    const v=[];
+    for(let k=0;k<5;k++){
+      const K=right?4-k:k,lo=GROOVES[K]-GH,hi=GROOVES[K]+GH;
+      if(right)v.push([HW,lo,TIP],[HW-TOOTH,lo,.14],[HW-TOOTH,hi,.14],[HW,hi,TIP]);
+      else v.push([-HW,hi,TIP],[-HW+TOOTH,hi,.14],[-HW+TOOTH,lo,.14],[-HW,lo,TIP]);
+    }
+    return v;
+  };
+  const top=[[HW,NY,1.6],[NX,NY,1],[NX,HH,1],[-HW,HH,1.6]];
+  const outline=bottom=>contour([...bottom,...comb(true),...top,...comb(false)]);
+  const body=outline([[-HW,-HH,1.1],[HW,-HH,1.1]]);
+  const slotted=outline([[-HW,-HH,1.1],[-SLOT_HW,-HH,.35],[-SLOT_HW,-HH+SLOT_D,.5],[SLOT_HW,-HH+SLOT_D,.5],[SLOT_HW,-HH,.35],[HW,-HH,1.1]]);
+
+  // Deck outline: one open pocket per side, its inner wall a true arc around the panel.
+  const a0=atan2(yLo-PILL_Y,gx(yLo)-PX),a1=atan2(yHi-PILL_Y,gx(yHi)-PX);
+  const arc=sgn=>{
+    const v=[];
+    for(let i=1;i<10;i++){
+      const a=a0+(a1-a0)*i/10,ca=cos(a),sa=sin(a);
+      v.push(sgn>0?[PX+PR*ca,PILL_Y+PR*sa,0,ca,sa]:[-(PX+PR*ca),PILL_Y+PR*sa,0,-ca,sa]);
+    }
+    return sgn>0?v:v.reverse();
+  };
+  const deck=contour([
+    [-HW+RAIL,-HH,1],[HW-RAIL,-HH,1],[HW-RAIL,YS,.3],[HW,YS,.9],
+    [HW,yLo,.72],[gx(yLo),yLo,.25],...arc(1),[gx(yHi),yHi,.25],[HW,yHi,.72],
+    ...top,
+    [-HW,yHi,.72],[-gx(yHi),yHi,.25],...arc(-1),[-gx(yLo),yLo,.25],[-HW,yLo,.72],
+    [-HW,YS,.9],[-HW+RAIL,YS,.3]
+  ]);
+  // Back plate: full width, stepped in where the comb teeth run past it.
+  const plate=contour([
+    [-HW,YBAND,.8],[HW,YBAND,.8],
+    [HW,yLo,.72],[HW-1.1,yLo,.3],[HW-1.1,yHi,.3],[HW,yHi,.72],
+    ...top,
+    [-HW,yHi,.72],[-HW+1.1,yHi,.3],[-HW+1.1,yLo,.3],[-HW,yLo,.72]
+  ]);
+
+  const dimple=circle(0,DIMPLE_Y,2.05);
+  const pit=circle(0,SCREW_Y,2.85);
+  const seamOcc=w=>w.o<-.06?.1:.5;
+
+  // Back shell, built in mirrored z. Seam at the top of its wall.
+  loft(body,path([[-.12,-ZS0],[0,-ZS0+.12],[0,ZBAND,SMALL],[-SMALL,ZBAND]]),{flip:true,occ:w=>w.z<-ZS0+.13?seamOcc(w):1});
+  cap(body,-SMALL,[[dimple,.3],[pit,.3]],ZBAND,1,{flip:true});
+
+  // Slot layer. Its wall rises past the lip's underside to hide that fillet where flush.
+  loft(slotted,path([[-.12,ZS0],[0,ZS0+.12],[0,ZS1+.12]]),{occ:(w,x,y)=>{
+    if(abs(x)<SLOT_HW+.01&&y<-HH+SLOT_D+.01)return y<-HH+.5?.6:.14;
+    return w.z<ZS0+.13?seamOcc(w):1;
+  }});
+
+  // Front lip and rails.
+  loft(body,path([[-.12,ZS1],[0,ZS1+.12],[0,ZL,.3],[-.3,ZL]]));
+  cap(body,-.12,[],ZS1,-1,{occ:.2});
+  cap(body,-.3,[],ZL,1,{mat:5});
+
+  // Oval panel, label recess and the insertion arrow, cut into the deck.
+  const pill=rrect(0,PILL_Y,PILL_HW,PILL_HH,PILL_HH);
+  const recess=rrect(0,LABEL_Y,REC_HW,REC_HH,2);
+  const arrow=contour([[-4.55,-25.8,.8],[0,-30.4,.8],[4.55,-25.8,.8]]);
+  const pillRows=path([[.14,ZF],[0,ZF,.12],[-.2,ZF-.3,.08],[-.34,ZF-.3]]);
+  const recRows=path([[.2,ZF],[0,ZF,.16],[-.92,ZF-.7,.1],[-1.1,ZF-.7]]);
+  const arrowRows=path([[.12,ZF],[0,ZF,.1],[-.12,ZF-.26,.06],[-.24,ZF-.26]]);
+  loft(pill,pillRows);      cap(pill,-.34,[],ZF-.3,1);
+  loft(arrow,arrowRows);    cap(arrow,-.24,[],ZF-.26,1);
+  loft(recess,recRows);     cap(recess,-1.1,[],ZF-.7,1,{occ:.4});
+
+  const grooveOcc=(w,x,y)=>{
+    const inGroove=abs(y-23.4)<4.7&&abs(x)<HW-.02&&abs(x)>20;
+    return inGroove&&w.nr>.5?.5+.5*clamp((w.z-ZL)/.8,0,1):1;
+  };
+  loft(deck,path([[0,ZL-.3],[0,ZF,EDGE],[-EDGE,ZF]]),{occ:grooveOcc});
+  cap(deck,-EDGE,[[pill,.14],[recess,.2],[arrow,.12]],ZF,1);
+
+  // Grip ribs: separate fingers with a tighter edge, their inner ends buried in the deck.
+  const ribRows=path([[0,ZL-.3],[0,ZF,SMALL],[-SMALL,ZF]]);
+  for(let k=0;k<4;k++){
+    const lo=GROOVES[k+1]+GH,hi=GROOVES[k]-GH,xIn=gx((lo+hi)/2)-1.3;
+    for(const c of [
+      contour([[xIn,lo,TIP],[HW,lo,TIP],[HW,hi,TIP],[xIn,hi,TIP]]),
+      contour([[-HW,lo,TIP],[-xIn,lo,TIP],[-xIn,hi,TIP],[-HW,hi,TIP]])
+    ]){
+      loft(c,ribRows,{occ:grooveOcc});
+      cap(c,-SMALL,[],ZF,1);
+    }
+  }
+
+  // Label: a thin sheet sitting in the recess.
+  const labelC=rrect(0,LABEL_Y,REC_HW-LAB_INSET,REC_HH-LAB_INSET,.72);
+  const zLab=ZF-.56;
+  loft(labelC,path([[0,ZF-.7],[0,zLab,.05],[-.05,zLab]],4),{mat:1});
+  cap(labelC,-.05,[],zLab,1,{mat:1});
+
+  // Back plate, mirrored z: dimple and the security screw.
+  const dimpleRows=[{o:.1,z:4,nr:0,nz:1}];
+  const S=(2.05*2.05+.42*.42)/(2*.42);
+  for(let k=0;k<=9;k++){
+    const rho=2.05+(0.3-2.05)*k/9;
+    const z=4-.42+(S-sqrt(S*S-rho*rho));
+    dimpleRows.push({o:rho-2.05,z,nr:-rho/S,nz:sqrt(1-rho*rho/(S*S))});
+  }
+  const zPin=dimpleRows[dimpleRows.length-1].z;
+  dimpleRows.push({o:.3-2.05,z:zPin,nr:-1,nz:0},{o:.3-2.05,z:zPin-.35,nr:-1,nz:0});
+  loft(dimple,dimpleRows,{flip:true});
+  cap(dimple,.3-2.05,[],zPin-.35,1,{flip:true,occ:.06});
+
+  const zPit=4-1.25;
+  loft(pit,path([[.16,4],[0,4,.14],[0,zPit]]),{flip:true,occ:w=>.22+.78*clamp((w.z-zPit)/1.1,0,1)});
+  cap(pit,0,[],zPit,1,{flip:true,occ:.06});
+  const head=circle(0,SCREW_Y,2.15);
+  const zHead=3.62;
+  loft(head,path([[0,zPit],[0,zHead,.28],[-.28,zHead]]),{flip:true,mat:2,occ:w=>.3+.7*clamp((w.z-zPit)/.6,0,1)});
+  const socket=polar(0,SCREW_Y,a=>.86+.17*cos(6*a),72);
+  loft(socket,path([[.05,zHead],[0,zHead,.04],[0,zHead-.55]],4),{flip:true,mat:2,occ:w=>.14+.86*clamp((w.z-zHead+.55)/.45,0,1)});
+  cap(socket,0,[],zHead-.55,1,{flip:true,mat:2,occ:.08});
+  cap(head,-.28,[[socket,.05]],zHead,1,{flip:true,mat:2});
+
+  loft(plate,path([[0,ZBAND-EDGE],[0,4,EDGE],[-EDGE,4]]),{flip:true});
+  cap(plate,-EDGE,[[dimple,.1],[pit,.16]],4,1,{flip:true});
+
+  // Edge connector: dark board and 32 gold contacts facing the label side.
+  const pcbC=rrect(0,-HH+SLOT_D/2+.06,SLOT_HW+.6,SLOT_D/2,.05);
+  cap(pcbC,0,[],ZS0+.01,1,{mat:3});
+  for(let i=0;i<PINS;i++){
+    const x=(i-(PINS-1)/2)*PIN_PITCH;
+    cap(rrect(x,-HH+3.9,.52,3.4,.08),0,[],ZS0+.03,1,{mat:2});
+  }
+}
+buildCartridge();
+
+/* ---------------------------------------------------------------------------
+   The studio. Everything polished metal shows is what it mirrors, so the lights
+   are analytic panels instead of a texture: edges stay razor sharp at any
+   resolution and can be filtered exactly per pixel.
+   az: degrees from the camera toward screen right. el: degrees up.
+--------------------------------------------------------------------------- */
+const LIGHTS=[
+  // camera side: a big soft source gives a face held square on its silver body...
+  {az:-5,el:16,roll:-14,hw:.2,hh:.85,e:[.3,.26],sv:.45,I:.72,col:[.97,.985,1],fill:1},
+  // ...and black flags cut hard lines into it, the way chrome is lit on a real set
+  {az:8,el:0,roll:-22,hw:.018,hh:1.3,e:[.002,.01],sv:.5,I:-.8,col:[1,1,1],fill:1},
+  {az:-19,el:0,roll:-22,hw:.007,hh:1.3,e:[.002,.002],sv:.5,I:-.7,col:[1,1,1],fill:1},
+  {az:0,el:-38,hw:1.3,hh:.22,e:[.2,.2],sv:.012,I:-.9,col:[1,1,1],fill:1},
+  {az:0,el:62,hw:1.3,hh:.22,e:[.2,.2],sv:.012,I:-.8,col:[1,1,1],fill:1},
+  {az:14,el:-4,roll:-22,hw:.006,hh:1,e:[.002,.002],sv:.4,I:1.8,col:[1,1,1],fill:1},
+  // strips that slide across the faces as it turns: a hard edge and a long fall-off
+  {az:33,el:4,roll:-20,hw:.03,hh:1.2,e:[.006,.03],sv:.45,I:1.3,col:[1,.985,.965]},
+  {az:58,el:8,roll:-20,hw:.075,hh:1.4,e:[.008,.012],sv:.5,I:3.4,col:[1,.975,.945]},
+  {az:98,el:10,roll:-14,hw:.1,hh:1.3,e:[.01,.34],sv:.5,I:1.05,col:[1,.985,.96]},
+  {az:-39,el:2,roll:-20,hw:.016,hh:1.3,e:[.004,.004],sv:.35,I:3.4,col:[.93,.965,1]},
+  {az:-64,el:10,roll:-16,hw:.1,hh:1.3,e:[.02,.02],sv:.5,I:1.7,col:[.95,.975,1]},
+  {az:-104,el:12,roll:-10,hw:.1,hh:1.1,e:[.36,.012],sv:.45,I:.9,col:[.95,.975,1]},
+  // rim panels behind the object, picked up at grazing angles
+  {az:148,el:8,hw:.25,hh:1.4,e:[.02,.02],sv:.3,I:3.5,col:[1,.98,.95]},
+  {az:-152,el:-4,hw:.14,hh:1.4,e:[.015,.015],sv:.3,I:3,col:[.94,.97,1]},
+  // overhead and low kicker
+  {az:0,el:78,hw:1.2,hh:.4,e:[.3,.3],sv:.1,I:1.6,col:[1,1,1]},
+  {az:0,el:-70,hw:1.4,hh:.3,e:[.3,.3],sv:.15,I:.35,col:[.92,.96,1]},
+  // pinpoint sources: small hard glints on edges and across the plate
+  {az:24,el:-8,hw:.0042,I:210,col:[1,.99,.97],spark:1},
+  {az:-27,el:18,hw:.0036,I:190,col:[.96,.98,1],spark:1},
+  {az:72,el:34,hw:.0046,I:220,col:[1,.98,.95],spark:1},
+  {az:-96,el:-22,hw:.0046,I:170,col:[.95,.975,1],spark:1},
+  {az:172,el:40,hw:.0046,I:190,col:[1,1,1],spark:1}
+];
+function lightBasis(L){
+  const az=L.az*PI/180,el=L.el*PI/180,roll=(L.roll||0)*PI/180;
+  const n=[sin(az)*cos(el),sin(el),cos(az)*cos(el)];
+  const u=[cos(az),0,-sin(az)];
+  const v=[n[1]*u[2]-n[2]*u[1],n[2]*u[0]-n[0]*u[2],n[0]*u[1]-n[1]*u[0]];
+  const cr=cos(roll),sr=sin(roll);
+  return {n,U:[0,1,2].map(i=>u[i]*cr+v[i]*sr),W:[0,1,2].map(i=>-u[i]*sr+v[i]*cr)};
+}
+// Sharp lookup: the blur along each panel axis comes from how fast the reflection
+// moves across a pixel on that axis. A thin edge keeps a crisp, bright glint where
+// a light crosses it, instead of being averaged away in every direction.
+function lightGLSL(L){
+  const {n,U,W}=lightBasis(L),col=L.col.map(c=>c*L.I);
+  const fill=L.fill?'*uFill':'';
+  if(L.spark)return `t=dot(d,${glv(n)});if(t>.01){a=${glv(U)};b=${glv(W)};p=vec2(dot(d,a),dot(d,b))/t;c+=${glv(col)}*k*spot(p,${glf(L.hw)},(vec2(abs(dot(fx,a))+abs(dot(fy,a)),abs(dot(fx,b))+abs(dot(fy,b)))*.62+w0)/t);}`;
+  return `t=dot(d,${glv(n)});if(t>.01){a=${glv(U)};b=${glv(W)};p=vec2(dot(d,a),dot(d,b))/t;c+=${glv(col)}*box(p,${glv([L.hw,L.hh])},${glv([L.e[0],L.e[1],L.sv])},(vec2(abs(dot(fx,a))+abs(dot(fy,a)),abs(dot(fx,b))+abs(dot(fy,b)))*.62+w0)/t)${fill};}`;
+}
+// Wide lobe for the faint veil polished metal keeps around bright reflections.
+function hazeGLSL(L){
+  if(L.spark)return '';
+  const {n,U,W}=lightBasis(L),col=L.col.map(c=>c*L.I);
+  const fill=L.fill?'*uFill':'';
+  return `t=dot(d,${glv(n)});if(t>.01){p=vec2(dot(d,${glv(U)}),dot(d,${glv(W)}))/t;c+=${glv(col)}*box(p,${glv([L.hw,L.hh])},${glv([L.e[0],L.e[1],L.sv])},vec2(.24/t))${fill};}`;
+}
+
+const FS_SCENE=hdr=>`#version 300 es
+precision highp float;
+${hdr?'':'#define LDR'}
+in vec3 vP,vN,vW; flat in float vMat; in float vOcc;
+uniform vec3 uCam; uniform mat3 uR; uniform float uFill;
+out vec4 fragColor;
+const float HW=${glf(HW)},HH=${glf(HH)};
+
+float box(vec2 p,vec2 h,vec3 s,vec2 w){
+  float x=smoothstep(-h.x-s.x-w.x,-h.x+s.x+w.x,p.x)-smoothstep(h.x-s.y-w.x,h.x+s.y+w.x,p.x);
+  float y=smoothstep(-h.y-s.z-w.y,-h.y+s.z+w.y,p.y)-smoothstep(h.y-s.z-w.y,h.y+s.z+w.y,p.y);
+  return x*y;
+}
+float spot(vec2 p,float r,vec2 w){
+  vec2 e=r+w;
+  return smoothstep(1.,.6,length(p/e))*r*r/(e.x*e.y);
+}
+vec3 ambient(vec3 d){return mix(vec3(.0065,.007,.0085),vec3(.024,.025,.029),smoothstep(-.7,.9,d.y));}
+vec3 studio(vec3 d,float w0,vec3 fx,vec3 fy,float k){
+  float t;vec2 p;vec3 a,b;
+  vec3 c=ambient(d);
+  ${LIGHTS.map(lightGLSL).join('\n  ')}
+  return max(c,ambient(d)*.5);
+}
+vec3 haze(vec3 d){
+  float t;vec2 p;
+  vec3 c=ambient(d);
+  ${LIGHTS.map(hazeGLSL).join('\n  ')}
+  return max(c,ambient(d)*.5);
+}
+
+float h21(vec2 p){vec3 q=fract(p.xyx*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}
+vec3 noised(vec2 x){
+  vec2 i=floor(x),f=fract(x);
+  vec2 u=f*f*f*(f*(f*6.-15.)+10.),du=30.*f*f*(f*(f-2.)+1.);
+  float a=h21(i),b=h21(i+vec2(1,0)),c=h21(i+vec2(0,1)),d=h21(i+vec2(1,1));
+  return vec3(a+(b-a)*u.x+(c-a)*u.y+(a-b-c+d)*u.x*u.y,du*(vec2(b-a,c-a)+(a-b-c+d)*u.yx));
+}
+// Real polished plate is never optically flat: a faint crown and slow waviness
+// bend the reflections, and that bending is what tells the eye it is metal.
+vec3 polish(vec3 N,vec3 P){
+  float f=smoothstep(.8,1.,abs(N.z));
+  vec2 tilt=.045*vec2(P.x/HW,P.y/HH);
+  if(abs(P.z)>3.98){
+    // Polishing also rolls the outer edges, so reflections bend as they near a fillet.
+    float hw=P.z>0.?mix(HW-${glf(RAIL)},HW,smoothstep(${glf(YS-.5)},${glf(YS+.5)},P.y)):HW;
+    vec2 e=vec2(hw-abs(P.x),P.y>0.?HH-P.y:(P.z<0.?P.y-(${glf(YBAND)}):P.y+HH));
+    tilt+=.13*sign(P.xy)*exp(-max(e,0.)/1.5);
+  }
+  N.xy+=f*tilt;
+  vec3 a=abs(N);
+  vec2 q=a.z>.6?P.xy:(a.x>a.y?P.zy:P.xz);
+  vec2 g=noised(q*.06+3.).yz*.0016+noised(q*.2+11.).yz*.00035;
+  if(a.z>.6)N.xy-=g;else if(a.x>a.y)N.zy-=g;else N.xz-=g;
+  return normalize(N);
+}
+
+const vec2 YP[9]=vec2[9](vec2(-.47,.5),vec2(-.264,.5),vec2(0.,.114),vec2(.264,.5),vec2(.47,.5),vec2(.0875,-.06),vec2(.0875,-.5),vec2(-.0875,-.5),vec2(-.0875,-.06));
+float sdY(vec2 p){
+  float d=dot(p-YP[0],p-YP[0]),s=1.;
+  for(int i=0,j=8;i<9;j=i,i++){
+    vec2 e=YP[j]-YP[i],w=p-YP[i];
+    vec2 b=w-e*clamp(dot(w,e)/dot(e,e),0.,1.);
+    d=min(d,dot(b,b));
+    bvec3 c=bvec3(p.y>=YP[i].y,p.y<YP[j].y,e.x*w.y>e.y*w.x);
+    if(all(c)||all(not(c)))s=-s;
+  }
+  return s*sqrt(d);
+}
+float sdRR(vec2 p,vec2 h,float r){vec2 q=abs(p)-h+r;return length(max(q,0.))+min(max(q.x,q.y),0.)-r;}
+
+// Polishing leaves hairlines: short, faint strokes at random angles, at most one per cell.
+float hairlines(vec2 q,float px){
+  float s=0.;
+  for(int i=0;i<2;i++){
+    float size=i==0?7.:11.;
+    vec2 g=q/size+float(i)*17.3,id=floor(g),f=fract(g)-.5;
+    float r=h21(id+float(i)*5.1);
+    if(r<.42){
+      float a=h21(id+2.7)*6.2832;
+      vec2 d=vec2(cos(a),sin(a));
+      f-=(vec2(h21(id+8.1),h21(id+4.4))-.5)*.3;
+      float along=dot(f,d)*size,across=abs(dot(f,vec2(-d.y,d.x)))*size;
+      float len=1.2+2.6*h21(id+6.6);
+      float w=max(px,.01);
+      s+=smoothstep(w,0.,across)*smoothstep(len,len*.5,abs(along))*(.01/w)*(.35+r);
+    }
+  }
+  return s;
+}
+
+// Floors of the grip grooves and side rails: shaded by the walls around them.
+float floorOcc(vec3 P){
+  float ax=abs(P.x);
+  if(P.y>18.4&&P.y<28.4){
+    float q=(P.y-${glf(GROOVES[4])})/1.9;
+    float d=${glf(GH)}-abs((fract(q+.5)-.5)*1.9);
+    return mix(.3,1.,smoothstep(0.,.42,d))*mix(.55,1.,smoothstep(HW-2.6,HW-.7,ax));
+  }
+  return mix(.5,1.,smoothstep(0.,.62,ax-(HW-${glf(RAIL)})));
+}
+
+void main(){
+  int m=int(vMat+.5);
+  vec3 P=vP,N=normalize(vN);
+  float pxw=length(fwidth(P.xy));
+  if(m==0||m==5)N=polish(N,P);
+  vec3 Nw=normalize(uR*N);
+  vec3 V=normalize(uCam-vW);
+  vec3 R=reflect(-V,Nw);
+  vec3 fx=dFdx(R),fy=dFdy(R);
+  float c=clamp(dot(Nw,V),0.,1.);
+  float fres=pow(1.-c,5.);
+  vec3 col;
+  if(m==1){
+    // Black laminated label with a white printed Y.
+    vec2 q=(P.xy-vec2(0.,${glf(LABEL_Y)}))/19.5;
+    float d=sdY(q)*19.5;
+    float aa=pxw*.72+.002;
+    float ink=1.-smoothstep(-aa,aa,d);
+    float e=sdRR(P.xy-vec2(0.,${glf(LABEL_Y)}),vec2(${glf(REC_HW-LAB_INSET)},${glf(REC_HH-LAB_INSET)}),.72);
+    float ao=mix(.42,1.,smoothstep(0.,2.4,-e));
+    float wrap=clamp(dot(Nw,normalize(vec3(.12,.28,1.))),0.,1.);
+    float lit=(.4+.85*wrap*wrap)*uFill;
+    vec3 base=mix(vec3(.0058,.006,.0066),vec3(1.25,1.245,1.23),ink)*lit*ao;
+    float F=.045+.955*fres;
+    col=base+F*(haze(R)*.12+studio(R,.004,fx,fy,0.)*.26)*mix(ao,1.,.5);
+  }else if(m==2){
+    // Hard gold: contacts and the security screw.
+    vec3 F0=vec3(1.,.77,.37);
+    vec3 F=F0+(1.-F0)*fres;
+    float o=vOcc;
+    if(abs(P.z-(${glf(ZS0+.03)}))<.01){o*=mix(.75,.05,smoothstep(0.,7.5,P.y+HH));}
+    col=(studio(R,.03,fx,fy,1.)+haze(R)*.2)*F*o;
+  }else if(m==3){
+    vec3 F=vec3(.05)+.95*fres;
+    float o=mix(.6,.03,smoothstep(0.,7.,P.y+HH));
+    col=(vec3(.004,.012,.008)+haze(R)*F)*o;
+  }else{
+    vec3 F0=vec3(.925,.93,.94);
+    vec3 F=F0+(1.-F0)*fres;
+    float o=m==5?floorOcc(P):vOcc;
+    vec3 veil=haze(R);
+    col=(studio(R,.0018,fx,fy,1.)*.955+veil*.045)*F*o;
+    if(abs(N.z)>.9)col+=veil*F*o*hairlines(P.xy+sign(P.z)*19.,pxw)*.4;
+  }
+  col=max(col,0.);
+#ifdef LDR
+  col=clamp((col*(2.51*col+.03))/(col*(2.43*col+.59)+.14),0.,1.);
+  fragColor=vec4(pow(col,vec3(1./2.2)),1.);
+#else
+  // Reversible range compression, so MSAA averages edges the way the eye would.
+  fragColor=vec4(col/(1.+max(col.r,max(col.g,col.b))),1.);
+#endif
+}`;
+
+const VS_SCENE=`#version 300 es
+layout(location=0) in vec3 aP;
+layout(location=1) in vec3 aN;
+layout(location=2) in vec2 aM;
+uniform mat4 uVP; uniform mat3 uR; uniform vec3 uT;
+out vec3 vP,vN,vW; flat out float vMat; out float vOcc;
+void main(){
+  vP=aP;vN=aN;vMat=aM.x;vOcc=aM.y;
+  vW=uR*aP+uT;
+  gl_Position=uVP*vec4(vW,1.);
+}`;
+
+const VS_FS=`#version 300 es
+out vec2 vUv;
+void main(){
+  vec2 p=vec2(float((gl_VertexID<<1)&2),float(gl_VertexID&2));
+  vUv=p;
+  gl_Position=vec4(p*2.-1.,0.,1.);
+}`;
+
+const FS_PREFILTER=`#version 300 es
+precision highp float;
+in vec2 vUv; uniform sampler2D uTex; uniform vec2 uTexel; uniform float uThreshold;
+out vec4 fragColor;
+vec3 grab(vec2 o){
+  vec3 c=texture(uTex,vUv+o*uTexel).rgb;
+  c/=max(1.-max(c.r,max(c.g,c.b)),1e-3);
+  float m=max(c.r,max(c.g,c.b)),k=uThreshold*.5;
+  float s=clamp(m-uThreshold+k,0.,2.*k);s=s*s/(4.*k+1e-4);
+  return c*max(s,m-uThreshold)/max(m,1e-4);
+}
+void main(){
+  vec3 a=grab(vec2(-1,-1)),b=grab(vec2(1,-1)),c=grab(vec2(-1,1)),d=grab(vec2(1,1));
+  // Karis weights keep single bright pixels from flickering in the glow.
+  float wa=1./(1.+max(a.r,max(a.g,a.b))),wb=1./(1.+max(b.r,max(b.g,b.b))),wc=1./(1.+max(c.r,max(c.g,c.b))),wd=1./(1.+max(d.r,max(d.g,d.b)));
+  fragColor=vec4((a*wa+b*wb+c*wc+d*wd)/(wa+wb+wc+wd),1.);
+}`;
+
+const FS_DOWN=`#version 300 es
+precision highp float;
+in vec2 vUv; uniform sampler2D uTex; uniform vec2 uTexel;
+out vec4 fragColor;
+vec3 s(float x,float y){return texture(uTex,vUv+vec2(x,y)*uTexel).rgb;}
+void main(){
+  vec3 c=s(0.,0.)*.125;
+  c+=(s(-2.,2.)+s(2.,2.)+s(-2.,-2.)+s(2.,-2.))*.03125;
+  c+=(s(0.,2.)+s(-2.,0.)+s(2.,0.)+s(0.,-2.))*.0625;
+  c+=(s(-1.,1.)+s(1.,1.)+s(-1.,-1.)+s(1.,-1.))*.125;
+  fragColor=vec4(c,1.);
+}`;
+
+const FS_UP=`#version 300 es
+precision highp float;
+in vec2 vUv; uniform sampler2D uTex; uniform vec2 uTexel;
+out vec4 fragColor;
+vec3 s(float x,float y){return texture(uTex,vUv+vec2(x,y)*uTexel).rgb;}
+void main(){
+  vec3 c=s(0.,0.)*4.;
+  c+=(s(-1.,0.)+s(1.,0.)+s(0.,-1.)+s(0.,1.))*2.;
+  c+=s(-1.,-1.)+s(1.,-1.)+s(-1.,1.)+s(1.,1.);
+  fragColor=vec4(c/16.*.72,1.);
+}`;
+
+const FS_FINAL=hdr=>`#version 300 es
+precision highp float;
+in vec2 vUv;
+uniform sampler2D uScene,uBloom;
+uniform float uExpo,uFrame;
+out vec4 fragColor;
+${hdr?`
+vec3 dec(vec3 c){return c/max(1.-max(c.r,max(c.g,c.b)),1e-3);}
+vec3 aces(vec3 x){return clamp((x*(2.51*x+.03))/(x*(2.43*x+.59)+.14),0.,1.);}
+float ign(vec2 p){return fract(52.9829189*fract(dot(p,vec2(.06711056,.00583715))));}
+void main(){
+  vec2 q=vUv-.5;
+  vec2 ca=q*dot(q,q)*.0028;
+  vec3 h=vec3(dec(texture(uScene,vUv+ca).rgb).r,dec(texture(uScene,vUv).rgb).g,dec(texture(uScene,vUv-ca).rgb).b);
+  vec3 c=(h+texture(uBloom,vUv).rgb*.05)*uExpo;
+  c=aces(c);
+  c=pow(c,vec3(1./2.2));
+  // Fine grain scaled by brightness: it hides banding and leaves the void pure black.
+  float l=max(c.r,max(c.g,c.b));
+  float n=ign(gl_FragCoord.xy+uFrame*5.588238)-.5;
+  c+=n*(1.2/255.+l*.009)*step(.0015,l);
+  fragColor=vec4(c,1.);
+}`:`
+void main(){fragColor=vec4(texture(uScene,vUv).rgb*uExpo,1.);}
+`}`;
+
+/* ---------------------------------------------------------------------------
+   WebGL plumbing
+--------------------------------------------------------------------------- */
+const gl=canvas.getContext('webgl2',{antialias:false,alpha:false,depth:false,stencil:false,powerPreference:'high-performance'});
+function giveUp(){
+  canvas.hidden=true;
+  caption.style.removeProperty('--line-top');
+  caption.style.transform='translateY(-50%)';
+}
+if(!gl){giveUp();return}
+
+let P,meshVAO,fsVAO,meshCount,T=null,hdr=false,samples=4;
+function program(vs,fs){
+  const mk=(type,src)=>{
+    const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);
+    if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(s));
+    return s;
+  };
+  const p=gl.createProgram();
+  gl.attachShader(p,mk(gl.VERTEX_SHADER,vs));
+  gl.attachShader(p,mk(gl.FRAGMENT_SHADER,fs));
+  gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS)){console.error(gl.getProgramInfoLog(p));return null}
+  const u={},n=gl.getProgramParameter(p,gl.ACTIVE_UNIFORMS);
+  for(let i=0;i<n;i++){const a=gl.getActiveUniform(p,i);u[a.name]=gl.getUniformLocation(p,a.name)}
+  return {p,u};
+}
+function initGL(){
+  hdr=!!gl.getExtension('EXT_color_buffer_float');
+  P={
+    scene:program(VS_SCENE,FS_SCENE(hdr)),
+    prefilter:program(VS_FS,FS_PREFILTER),
+    down:program(VS_FS,FS_DOWN),
+    up:program(VS_FS,FS_UP),
+    final:program(VS_FS,FS_FINAL(hdr))
+  };
+  if(Object.values(P).some(p=>!p))return false;
+  meshVAO=gl.createVertexArray();
+  gl.bindVertexArray(meshVAO);
+  const vb=gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER,vb);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(vData),gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,3,gl.FLOAT,false,32,0);
+  gl.enableVertexAttribArray(1);gl.vertexAttribPointer(1,3,gl.FLOAT,false,32,12);
+  gl.enableVertexAttribArray(2);gl.vertexAttribPointer(2,2,gl.FLOAT,false,32,24);
+  const ib=gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(iData),gl.STATIC_DRAW);
+  meshCount=iData.length;
+  gl.bindVertexArray(null);
+  fsVAO=gl.createVertexArray();
+  const fmt=hdr?gl.RGBA16F:gl.RGBA8;
+  const got=gl.getInternalformatParameter(gl.RENDERBUFFER,fmt,gl.SAMPLES);
+  samples=got&&got.length?min(4,got[0]):0;
+  T=null;
+  return true;
+}
+function texTarget(w,h,internal){
+  const tex=gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D,tex);
+  gl.texStorage2D(gl.TEXTURE_2D,1,internal,w,h);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+  const fb=gl.createFramebuffer();
+  gl.bindFramebuffer(gl.FRAMEBUFFER,fb);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,tex,0);
+  return {tex,fb,w,h};
+}
+function freeTargets(){
+  if(!T)return;
+  gl.deleteFramebuffer(T.ms);gl.deleteRenderbuffer(T.msColor);gl.deleteRenderbuffer(T.msDepth);
+  for(const t of [T.res,...T.chain]){gl.deleteFramebuffer(t.fb);gl.deleteTexture(t.tex)}
+  T=null;
+}
+function buildTargets(w,h,cw,ch){
+  freeTargets();
+  const fmt=hdr?gl.RGBA16F:gl.RGBA8;
+  const ms=gl.createFramebuffer();
+  gl.bindFramebuffer(gl.FRAMEBUFFER,ms);
+  const msColor=gl.createRenderbuffer();
+  gl.bindRenderbuffer(gl.RENDERBUFFER,msColor);
+  gl.renderbufferStorageMultisample(gl.RENDERBUFFER,samples,fmt,w,h);
+  gl.framebufferRenderbuffer(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.RENDERBUFFER,msColor);
+  const msDepth=gl.createRenderbuffer();
+  gl.bindRenderbuffer(gl.RENDERBUFFER,msDepth);
+  gl.renderbufferStorageMultisample(gl.RENDERBUFFER,samples,gl.DEPTH_COMPONENT24,w,h);
+  gl.framebufferRenderbuffer(gl.FRAMEBUFFER,gl.DEPTH_ATTACHMENT,gl.RENDERBUFFER,msDepth);
+  const res=texTarget(w,h,fmt);
+  const chain=[];
+  if(hdr){
+    let bw=max(2,cw>>1),bh=max(2,ch>>1);
+    for(let i=0;i<6&&bw>=4&&bh>=4;i++){
+      chain.push(texTarget(bw,bh,gl.R11F_G11F_B10F));
+      bw>>=1;bh>>=1;
+    }
+  }
+  T={ms,msColor,msDepth,res,chain,w,h,cw,ch};
+}
+
+/* ---------------------------------------------------------------------------
+   Sizing: the phrase and the cartridge are placed as one centred block.
+--------------------------------------------------------------------------- */
+const FOV=17*PI/180;
+const QUALITY=[1.5,1.25,1,.85,.7];
+const MAX_PIXELS=6.5e6;
+let quality=0,cam={D:360,lift:0,aspect:1.6},VP=new Float32Array(16),cssW=0,cssH=0,dpr=1;
+
+function layout(){
+  cssW=max(1,innerWidth);cssH=max(1,innerHeight);
+  dpr=min(devicePixelRatio||1,2);
+  if(dpr>=1.5&&quality<2)quality=2;
+  const aspect=cssW/cssH;
+  const worldH=max(65.5/.63,(64/.8)/aspect);
+  const pxMm=cssH/worldH;
+  const cartPx=65.5*pxMm;
+  const textPx=caption.offsetHeight||64;
+  const gapPx=max(pxMm*7.5,22);
+  const topPx=max(8,(cssH-cartPx-gapPx-textPx)/2);
+  const centrePx=topPx+cartPx/2;
+  cam.lift=(cssH/2-centrePx)/pxMm;
+  cam.D=worldH/2/tan(FOV/2);
+  cam.aspect=aspect;
+  caption.style.setProperty('--line-top',(topPx+cartPx+gapPx).toFixed(1)+'px');
+  // Perspective × view; the camera sits on +z looking down -z.
+  const f=1/tan(FOV/2),near=cam.D-70,far=cam.D+70;
+  VP.fill(0);
+  VP[0]=f/aspect;VP[5]=f;
+  VP[10]=(far+near)/(near-far);VP[11]=-1;
+  VP[14]=2*far*near/(near-far)+(-cam.D)*VP[10];
+  VP[15]=cam.D;
+  const cw=max(2,Math.round(cssW*dpr)),ch=max(2,Math.round(cssH*dpr));
+  canvas.width=cw;canvas.height=ch;
+  sizeTargets(cw,ch);
+}
+function sizeTargets(cw,ch){
+  let s=dpr>=1.5?min(1,QUALITY[quality]):QUALITY[quality];
+  if(cw*s*ch*s>MAX_PIXELS)s=sqrt(MAX_PIXELS/(cw*ch));
+  const w=max(2,Math.round(cw*s)),h=max(2,Math.round(ch*s));
+  buildTargets(w,h,cw,ch);
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+--------------------------------------------------------------------------- */
+const OMEGA=2*PI/24,OMEGA_CALM=2*PI/40;   // one slow turn every 24 s (40 s with reduced motion)
+const easeOut=x=>1-(1-x)**3;
+let phase=calm?-.42:-.99,rate=1,spinOff=0,spinVel=0,tiltOff=0,dragging=false,lastX=0,lastY=0,pendX=0,pendY=0;
+let px=0,py=0,spx=0,spy=0,clock=0,lastT=null,frameN=0,raf=0;
+let slow=0,slowN=0,settle=0,prevAvg=0,adapt=true;
+const Rm=new Float32Array(9);
+
+function setRotation(spin,tilt,roll){
+  const cy=cos(spin),sy=sin(spin),cx=cos(tilt),sx=sin(tilt),cz=cos(roll),sz=sin(roll);
+  // Rz · Rx · Ry, column-major
+  const m00=cy,m01=0,m02=sy,m10=sx*sy,m11=cx,m12=-sx*cy,m20=-cx*sy,m21=sx,m22=cx*cy;
+  Rm[0]=cz*m00-sz*m10; Rm[3]=cz*m01-sz*m11; Rm[6]=cz*m02-sz*m12;
+  Rm[1]=sz*m00+cz*m10; Rm[4]=sz*m01+cz*m11; Rm[7]=sz*m02+cz*m12;
+  Rm[2]=m20;           Rm[5]=m21;           Rm[8]=m22;
+}
+
+function drawFS(){gl.bindVertexArray(fsVAO);gl.drawArrays(gl.TRIANGLES,0,3)}
+
+function frame(now){
+  raf=requestAnimationFrame(frame);
+  if(lastT===null)lastT=now;
+  const real=(now-lastT)/1000;
+  const dt=min(real,.05);lastT=now;
+  const t=clock+=dt;
+  frameN++;
+
+  // It turns by itself whenever it is not held, easing back in after a drag.
+  rate+=((dragging?0:1)-rate)*(1-exp(-dt*2));
+  phase+=(calm?OMEGA_CALM:OMEGA)*rate*dt;
+  if(dragging){
+    spinOff+=pendX;tiltOff=clamp(tiltOff+pendY,-.6,.6);
+    if(dt>0)spinVel+=((pendX/dt)-spinVel)*.35;
+    pendX=pendY=0;
+  }else{
+    spinOff+=spinVel*dt;
+    spinVel*=exp(-dt*1.5);
+    tiltOff*=exp(-dt*1.1);
+  }
+  spx+=(px-spx)*(1-exp(-dt*2.2));
+  spy+=(py-spy)*(1-exp(-dt*2.2));
+
+  const intro=calm?1:easeOut(clamp(t/3.6,0,1));
+  const expo=calm?1:smooth(.05,1.1,t);
+  const fill=calm?1:smooth(.5,2.5,t);
+  const spin=phase-(calm?0:.12*sin(2*phase))+spinOff+(calm?0:spx*.1)-(1-intro)*1.3;
+  const tilt=(calm?-.14:-.1+.16*sin(t*.31+3.31))+(calm?0:spy*.06)+tiltOff;
+  const roll=calm?-.03:.05*sin(t*.23+2);
+  const bobY=calm?0:1.5*sin(t*.72);
+  const bobX=calm?0:.6*sin(t*.47+1);
+  setRotation(spin,tilt,roll);
+
+  // Scene
+  gl.bindFramebuffer(gl.FRAMEBUFFER,T.ms);
+  gl.viewport(0,0,T.w,T.h);
+  gl.clearColor(0,0,0,1);
+  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.disable(gl.BLEND);
+  gl.useProgram(P.scene.p);
+  gl.uniformMatrix4fv(P.scene.u.uVP,false,VP);
+  gl.uniformMatrix3fv(P.scene.u.uR,false,Rm);
+  gl.uniform3f(P.scene.u.uT,bobX,cam.lift+bobY,0);
+  gl.uniform3f(P.scene.u.uCam,0,0,cam.D);
+  gl.uniform1f(P.scene.u.uFill,fill);
+  gl.bindVertexArray(meshVAO);
+  gl.drawElements(gl.TRIANGLES,meshCount,gl.UNSIGNED_INT,0);
+
+  gl.bindFramebuffer(gl.READ_FRAMEBUFFER,T.ms);
+  gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER,T.res.fb);
+  gl.blitFramebuffer(0,0,T.w,T.h,0,0,T.w,T.h,gl.COLOR_BUFFER_BIT,gl.NEAREST);
+
+  gl.disable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);
+  gl.activeTexture(gl.TEXTURE0);
+
+  // Glow pyramid
+  if(hdr&&T.chain.length){
+    const C=T.chain;
+    gl.useProgram(P.prefilter.p);
+    gl.uniform1i(P.prefilter.u.uTex,0);
+    gl.uniform1f(P.prefilter.u.uThreshold,2.6);
+    gl.uniform2f(P.prefilter.u.uTexel,.5/C[0].w,.5/C[0].h);
+    gl.bindFramebuffer(gl.FRAMEBUFFER,C[0].fb);
+    gl.viewport(0,0,C[0].w,C[0].h);
+    gl.bindTexture(gl.TEXTURE_2D,T.res.tex);
+    drawFS();
+    gl.useProgram(P.down.p);
+    gl.uniform1i(P.down.u.uTex,0);
+    for(let i=1;i<C.length;i++){
+      gl.uniform2f(P.down.u.uTexel,1/C[i-1].w,1/C[i-1].h);
+      gl.bindFramebuffer(gl.FRAMEBUFFER,C[i].fb);
+      gl.viewport(0,0,C[i].w,C[i].h);
+      gl.bindTexture(gl.TEXTURE_2D,C[i-1].tex);
+      drawFS();
+    }
+    gl.useProgram(P.up.p);
+    gl.uniform1i(P.up.u.uTex,0);
+    gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE);
+    for(let i=C.length-1;i>0;i--){
+      gl.uniform2f(P.up.u.uTexel,1.4/C[i].w,1.4/C[i].h);
+      gl.bindFramebuffer(gl.FRAMEBUFFER,C[i-1].fb);
+      gl.viewport(0,0,C[i-1].w,C[i-1].h);
+      gl.bindTexture(gl.TEXTURE_2D,C[i].tex);
+      drawFS();
+    }
+    gl.disable(gl.BLEND);
+  }
+
+  // Final image
+  gl.bindFramebuffer(gl.FRAMEBUFFER,null);
+  gl.viewport(0,0,T.cw,T.ch);
+  gl.useProgram(P.final.p);
+  gl.uniform1i(P.final.u.uScene,0);
+  gl.bindTexture(gl.TEXTURE_2D,T.res.tex);
+  if(hdr){
+    gl.activeTexture(gl.TEXTURE1);
+    gl.bindTexture(gl.TEXTURE_2D,T.chain.length?T.chain[0].tex:T.res.tex);
+    gl.uniform1i(P.final.u.uBloom,1);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.uniform1f(P.final.u.uFrame,calm?0:frameN%64);
+  }
+  gl.uniform1f(P.final.u.uExpo,expo);
+  drawFS();
+
+  // Slower machines trade resolution for a steady frame rate.
+  if(t>4&&document.visibilityState==='visible'&&real<.25){
+    slow+=real;slowN++;
+    if(slowN>=50){
+      const avg=slow/slowN;
+      if(adapt&&avg>1/42&&now>settle){
+        if(prevAvg&&avg>prevAvg*.9){quality--;adapt=false;sizeTargets(T.cw,T.ch)}
+        else if(quality<QUALITY.length-1){prevAvg=avg;quality++;sizeTargets(T.cw,T.ch);settle=now+1200}
+      }
+      slow=0;slowN=0;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   The cartridge can be picked up and spun; otherwise it leans toward the pointer.
+--------------------------------------------------------------------------- */
+canvas.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  dragging=true;spinVel=0;lastX=e.clientX;lastY=e.clientY;
+  try{canvas.setPointerCapture(e.pointerId)}catch(_){}
+  canvas.classList.add('held');
+});
+addEventListener('pointermove',e=>{
+  px=e.clientX/cssW*2-1;py=e.clientY/cssH*2-1;
+  if(!dragging)return;
+  // A release can go missing (a context menu, a button let go outside the window):
+  // no button held means the drag is over, so it never stays glued to the pointer.
+  if(e.pointerType==='mouse'&&e.buttons===0){release();return}
+  pendX+=(e.clientX-lastX)*.0072;pendY+=(e.clientY-lastY)*.0042;
+  lastX=e.clientX;lastY=e.clientY;
+});
+const release=()=>{dragging=false;canvas.classList.remove('held')};
+addEventListener('pointerup',release);
+addEventListener('pointercancel',release);
+canvas.addEventListener('lostpointercapture',release);
+addEventListener('blur',release);
+document.documentElement.addEventListener('pointerleave',()=>{px=py=0});
+
+let rt=0;
+addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(layout,60)});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
+
+canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();cancelAnimationFrame(raf)});
+canvas.addEventListener('webglcontextrestored',()=>{
+  if(initGL()){layout();raf=requestAnimationFrame(frame)}else giveUp();
+});
+
+if(!initGL()){giveUp();return}
+layout();
+raf=requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
